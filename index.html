@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="lang" data-lang="name">ffffffffffffff</h1>
+    <p class="lang" data-lang="age"></p>
+
+    <br>
+    <a onclick="changeLang(infoEn)">en</a>
+    <a onclick="changeLang(infoar)">ar</a>
+    <a onclick="changeLang(infoFa)">FA</a>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script>
+        // var langu = $('.lang[data-lang]')[1];
+// console.log($(');
+
+$( document ).ready(function() {
+    changeLang(infoEn)
+});
+
+var infoEn={
+    "name":"yousef",
+    "age":"23"
+}
+
+var infoar={
+    "name":"يوسف",
+    "age":"33"
+}
+var infoFa={
+    "name":"yooooosefffff",
+    "age":"330"
+}
+var words = [];
+
+function  changeLang(langs){
+    
+    for(var i=0;i<$('.lang[data-lang]').length;i++){
+        $(`.lang[data-lang=${$('.lang[data-lang]')[i].getAttribute("data-lang")}]`).text(langs[`${$('.lang[data-lang]')[i].getAttribute("data-lang")}`]);
+    
+    }
+}
+
+// console.log(words[0]);
+
+// .innerText("yousefddd")
+
+// console.log(words[0].getAttribute("data-lang"))
+
+
+
+
+    </script>
+</body>
+</html>
